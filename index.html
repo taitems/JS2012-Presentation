@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Web Debugging on Devices</title>
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div class="step slide init" data-x="0" data-y="-2000" data-scale="10" data-rotate-x="-40">
+        <h1>JavaScript Trends</h1>
+        <h3>What's now, what's next.</h3>
+    </div>
+
+
+    <div class="step slide title" data-x="0" data-y="800" data-rotate-x="10">
+        <h2>jQuery Majors</h2>
+    </div>
+
+
+    <div class="step slide" data-x="0" data-y="1600" data-rotate-x="10">
+        <h2>jQuery 1.8</h2>
+        <ul>
+            <li>
+                <strong>Modularity</strong> &mdash; build your own jQuery.
+            </li>
+            <li>
+                <strong>Vendor-Prefixed CSS</strong> &mdash; LESS/SASS in <em>my</em> JS?
+            </li>
+            <li>
+                <strong>Obligatory Sizzle.js Update</strong> &mdash; sizzle powers the selector engine.
+            </li>
+            <li>
+                <strong>XSS Protection</strong> &mdash; because you sure don't do it.
+            </li>
+            <li>
+                <strong>Remove Deprecated Features</strong> &mdash; removes deprecated hangers-on, eg: <code>$.browser</code>.
+            </li>
+        </ul>
+        <a class="resource" href="http://blog.jquery.com/2012/06/22/jquery-1-8-beta-1-see-whats-coming-and-going/" target="_blank"></a>
+    </div>
+
+
+    <div class="step slide" data-x="0" data-y="2400" data-rotate-x="10">
+        <h2>jQuery 1.9 &amp; jQuery 2.0</h2>
+        <p>
+            Essentially the same API, but 2.0 will drop "OldIE" support, freeing it up enormously.
+        </p>
+        <ul>
+            <li>
+                <strong>2.0 Drops IE &lt; 9 Support</strong>
+            </li>
+            <ul>
+                <li>
+                    <strong>Reduced file size</strong> &mdash; removes all shims, polyfills and <code>if</code> blocks.
+                </li>
+                <li>
+                    <strong>Massive Performance Gains</strong>.
+                </li>
+                <li>
+                    <strong>Facilitates Progress</strong> &mdash; can focus efforts on functionality like <code>$.deferred</code>.
+                </li>
+            </ul>
+        </ul>
+        <a class="resource" href="http://blog.jquery.com/2012/06/28/jquery-core-version-1-9-and-beyond/" target="_blank"></a>
+    </div>
+
+
+    <div class="step slide" data-x="0" data-y="3200" data-rotate-x="10">
+        <h2>FAQs</h2>
+        <p>
+            <strong>My site still has many IE7/8 visitors but I want to use jQuery 2.0. Can I do that?</strong>
+        </p>
+        <p>
+            If your web site needs oldIE support, and we expect most sites will need it for at least another year or two, you can use IE conditional comments to include version 1.9 only when visitors are using oldIE:
+        </p>
+        <pre>
+    &lt;!--[if lt IE 9]&gt;
+        &lt;script src="jquery-1.9.0.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+    &lt;!--[if gte IE 9]&gt;&lt;!--&gt;
+        &lt;script src="jquery-2.0.0.js"&gt;&lt;&lt;/script&gt;
+    &lt;!--&lt;![endif]--&gt;
+</pre>
+    </div>
+
+
+    <div class="step slide" data-x="0" data-y="4000" data-rotate-x="10">
+        <h2>FAQs</h2>
+        <p>
+            <strong>Why not make an "oldIE plugin" for jQuery 2.0?</strong>
+        </p>
+        <p>
+            Special dispensations for oldIE are sprinkled throughout jQuery. Refactoring the code to provide enough hooks so that oldIE support could be added as a plugin would complicate the code for the modern browser case. Plus, developers supporting oldIE and using a public CDN would then need to include two files (jQuery 2.0 and the oldIE plugin) instead of one.
+        </p>
+    </div>
+
+
+    <div class="step slide" data-x="0" data-y="4800" data-rotate-x="10">
+        <h2>What's the ETA?</h2>
+        <ul>
+            <li>
+                <strong>jQuery 1.8</strong> &mdash; should arrive within a month.
+            </li>
+            <li>
+                <strong>jQuery 1.9</strong> &mdash; early 2013.
+            </li>
+            <li>
+                <strong>jQuery 2.0</strong> &mdash; early 2013, not long after 1.9.
+            </li>
+        </ul>
+        <a class="resource" href="http://blog.jquery.com/2012/06/28/jquery-core-version-1-9-and-beyond/" target="_blank"></a>
+    </div>
+
+
+    <div class="step slide title" data-x="0" data-y="5600" data-rotate-x="10">
+        <h2>ECMAScript 6</h2>
+    </div>
+
+
+    <div class="step slide" data-x="0" data-y="6400" data-rotate-x="10">
+        <h2>A select few goodies</h2>
+        <ul>
+            <li>
+                <strong>let keyword</strong> &mdash; block scoped var.
+            </li>
+            <li>
+                <strong>default arguments</strong> &mdash; the end of <code>$.extend(defaults,params)</code>.
+            </li>
+            <li>
+                <strong>multiline strings</strong>
+            </li>
+            <li>
+                <strong>templating</strong> &mdash; embed variables into strings natively.
+            </li>
+            <li>
+                <strong>proposed module system</strong>
+            </li>
+        </ul>
+        <a class="resource" href="http://kishorelive.com/2011/11/22/ecmascript-6-looks-promising/" target="_blank"></a>
+    </div>
+
+
+    <div class="step slide title" data-x="0" data-y="7200" data-rotate-x="10">
+        <h2>Patterns &amp; Best Practices</h2>
+    </div>
+
+
+    <div class="step slide" data-x="0" data-y="8000" data-rotate-x="10">
+        <h2>MVC vs. MVP vs. MVVM</h2>
+        <p>
+            Continued development and introduction of libraries. Plenty of Addy Osmani resources help to make sense of the mess.
+        </p>
+        <ul>
+            <li>
+                KnockoutJS
+            </li>
+            <li>
+                Backbone.js
+            </li>
+            <li>
+                Spine
+            </li>
+            <li>
+                Ember.js &mdash; branched from Sproutcore
+            </li>
+            <li>
+                Cappucino
+            </li>
+            <li>
+                Angular.js
+            </li>
+        </ul>
+        <a class="resource" href="http://addyosmani.com/blog/understanding-mvvm-a-guide-for-javascript-developers/" target="_blank"></a>
+    </div>
+
+
+    <div class="step slide" data-x="0" data-y="8800" data-rotate-x="10">
+        <h2>Modularity (AMD)</h2>
+        <p>
+            <strong>Fundamental question:</strong> What's more important, keeping HTTP requests down or having a site immediately responsive?
+        </p>
+        <p>
+            Movement on the W3 spec front, no winners yet. ES-Harmony path proposed.
+        </p>
+        <ul>
+            <li>
+                Require.js
+            </li>
+            <li>
+                CommonJS
+            </li>
+            <li>
+                Yepnone.js &mdash; conditional modularity.
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="step slide" data-x="0" data-y="9600" data-rotate-x="10">
+        <h2>Compilation</h2>
+        <p>
+            2011-2012: the years everything compiled to JS.
+        </p>
+        <a class="resource" href="https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS" target="_blank"></a>
+    </div>
+
+
+    <div class="step slide" data-x="0" data-y="10400" data-rotate-x="10">
+        <h2>Linting</h2>
+        <p>
+            The community is espousing linting more and more, made possible by better tools and better IDE and Text Editor plugins/scripts.
+        </p>
+        <ul>
+            <li>
+                <strong>JSHint</strong> &mdash; a kinder, community-influenced lint.
+            </li>
+            <li>
+                <strong>IDE Plugins</strong> &mdash; Sublime Text, Visual Studio etc.</code>.
+            </li>
+        </ul>
+        <a class="resource" href="http://jshint.com" target="_blank"></a>
+    </div>
+
+
+    <div class="step slide title" data-x="0" data-y="11200" data-rotate-x="10">
+        <h2>Hardware &amp; Browser Level</h2>
+    </div>
+
+
+    <div class="step slide" data-x="0" data-y="12000" data-rotate-x="10">
+        <h2>Not going to cover</h2>
+        <p>
+            Plenty happening in this space.
+        </p>
+        <p>
+            Covered elsewhere in better detail.
+        </p>
+    </div>
+
+
+    <div class="step slide title" data-x="0" data-y="12800" data-rotate-x="10">
+        <h2>Go forth and build shit</h2>
+    </div>
+
+</div>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
